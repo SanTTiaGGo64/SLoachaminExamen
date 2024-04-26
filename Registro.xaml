@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SLoachaminExamen.Registro"
+             Title="Registro">
+    <VerticalStackLayout>
+        <Label 
+Text="Usuario Conectado:"
+TextColor="Blue"           
+VerticalOptions="Start" 
+HorizontalOptions="End" 
+FontSize="22"/>
+        
+        <Label  
+            x:Name="lblUserConectado"
+TextColor="Blue"           
+VerticalOptions="Start" 
+HorizontalOptions="End" 
+FontSize="22"/>
+
+        <Label 
+Text="REGISTRO"
+TextColor="Blue"           
+VerticalOptions="Center" 
+HorizontalOptions="Center" 
+FontSize="22"/>
+
+        <Label 
+ Text="Costo Curso: "
+ TextColor="Red"           
+ VerticalOptions="Center" 
+ HorizontalOptions="Start" 
+ FontSize="20"/>
+        <Entry x:Name="txtCostoCurso"
+ Placeholder="Ingrese su usuario" Text="1500" IsReadOnly="true">
+        </Entry>
+
+        <Grid x:Name="grdValores">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" x:Name="lbl1" Text="Fecha: "/>
+            <Label Grid.Row="1" Grid.Column="0" x:Name="lbl2" Text="Pais: "/>
+            <Label Grid.Row="2" Grid.Column="0" x:Name="lbl3" Text="Ciudad: "/>
+            <Label Grid.Row="3" Grid.Column="0" x:Name="lbl4" Text="Monto Inicial: "/>
+            <Label Grid.Row="4" Grid.Column="0" x:Name="lbl5" Text="Pago Mensual: "/>
+            
+            <DatePicker Grid.Row="0" Grid.Column="1" x:Name="dpFecha"/>
+            <Picker Grid.Row="1" Grid.Column="1" x:Name="pckPais" />
+            <Picker Grid.Row="2" Grid.Column="1" x:Name="pckCiudad" />
+            <Entry Grid.Row="3" Grid.Column="1" x:Name="txtMontoInicial"/>
+            <Entry Grid.Row="4" Grid.Column="1" x:Name="txtPagoMensual" IsReadOnly="True"/>
+        </Grid>
+        
+        <Grid x:Name="grdDatosCliente">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" x:Name="lbl6" Text="Nombre: "/>
+            <Label Grid.Row="0" Grid.Column="1" x:Name="lbl7" Text="Apellido: "/>
+            <Label Grid.Row="0" Grid.Column="2" x:Name="lbl8" Text="Edad: "/>
+
+            <Entry Grid.Row="1" Grid.Column="0" x:Name="txtNombre"/>
+            <Entry Grid.Row="1" Grid.Column="1" x:Name="txtApellido"/>
+            <Entry Grid.Row="1" Grid.Column="2" x:Name="txtEdad" Keyboard="Numeric"/>
+        </Grid>
+
+        <Grid x:Name="grdBotones">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Row="0" Grid.Column="0" x:Name="btnCalcular" Text="Calcular PMensual"  Clicked="btnCalcularButtonClicked"/>
+            <Button Grid.Row="0" Grid.Column="1" x:Name="btnResumen" Text="Ver resumen"  Clicked="btnResumenButtonClicked"/>
+        </Grid>
+        
+        
+    </VerticalStackLayout>
+</ContentPage>

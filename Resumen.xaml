@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SLoachaminExamen.Resumen"
+             Title="Ventana Resumen">
+    <VerticalStackLayout>
+        <Label 
+Text="Usuario Conectado:"
+TextColor="Blue"           
+VerticalOptions="Start" 
+HorizontalOptions="End" 
+FontSize="22"/>
+
+        <Label  
+            x:Name="lblUserConectado"
+TextColor="Blue"           
+VerticalOptions="Start" 
+HorizontalOptions="End" 
+FontSize="22"/>
+
+        <Grid x:Name="grdDatosCliente">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Text="Nombre: "/>
+            <Label Grid.Row="1" Grid.Column="0" Text="Apellido: "/>
+            <Label Grid.Row="2" Grid.Column="0" Text="Edad: "/>
+            <Label Grid.Row="3" Grid.Column="0" Text="Fecha: "/>
+            <Label Grid.Row="4" Grid.Column="0" Text="Ciudad: "/>
+            <Label Grid.Row="5" Grid.Column="0" Text="Pais: "/>
+            <Label Grid.Row="6" Grid.Column="0" Text="Monto Inicial: "/>
+            <Label Grid.Row="7" Grid.Column="0" Text="Pago Mensual: "/>
+            <Label Grid.Row="8" Grid.Column="0" Text="Pago Total: "/>
+
+            <Entry Grid.Row="0" Grid.Column="1" x:Name="txtNombre" IsReadOnly="true"/>
+            <Entry Grid.Row="1" Grid.Column="1" x:Name="txtApellido"  IsReadOnly="true"/>
+            <Entry Grid.Row="2" Grid.Column="1" x:Name="txtEdad"  IsReadOnly="true"/>
+            <Entry Grid.Row="3" Grid.Column="1" x:Name="txtFecha"  IsReadOnly="true"/>
+            <Entry Grid.Row="4" Grid.Column="1" x:Name="txtCiudad"  IsReadOnly="true"/>
+            <Entry Grid.Row="5" Grid.Column="1" x:Name="txtPais"  IsReadOnly="true"/>
+            <Entry Grid.Row="6" Grid.Column="1" x:Name="txtMinicial"  IsReadOnly="true"/>
+            <Entry Grid.Row="7" Grid.Column="1" x:Name="txtPMensual"  IsReadOnly="true"/>
+            <Entry Grid.Row="8" Grid.Column="1" x:Name="txtPTotal"  IsReadOnly="true"/>
+        </Grid>
+
+        <Button x:Name="btnCerrar" 
+ Text="Cerrar sesión" 
+ Clicked="btnCerrarButtonClicked"/>
+
+    </VerticalStackLayout>
+</ContentPage>
